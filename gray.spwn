@@ -1,0 +1,12 @@
+extract obj_props;
+bits = import bits;
+
+let number = @bitstring::new(10)
+let final_number = number.xor(number.rshift())
+
+$.add(obj {
+    OBJ_ID: 914,
+    X: 300,
+    Y: 90,
+    TEXT: $.b64encode(final_number.value)
+})
